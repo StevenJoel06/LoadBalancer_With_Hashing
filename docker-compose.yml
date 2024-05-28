@@ -1,0 +1,30 @@
+version: "3.11"
+services:
+  load_balancer:
+    build: ./loadbalancer
+    container_name: load_balancer
+    ports:
+      - "5000:5000"
+    environment:
+      - NUM_SERVERS=3
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  server1:
+    build: ./server
+    container_name: server1
+    environment:
+      - SERVER_ID=1
+
+  server2:
+    build: ./server
+    container_name: server2
+    environment:
+      - SERVER_ID=2
+
+  server3:
+    build: ./server
+    container_name: server3
+    environment:
+      - SERVER_ID=3
