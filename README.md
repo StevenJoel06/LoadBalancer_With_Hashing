@@ -65,8 +65,8 @@ make test
   <img src="task1.png" alt="Experiment 1 Bar Chart">
 </p>
 
-### Expected Outcome
-- Even distribution of load among server instances
+### Observation
+- The MD5 hash function resulted in an imbalanced load distribution among the servers
 
 ## Experiment 2: Scalability
 
@@ -74,7 +74,7 @@ make test
 2. Plot a line chart showing the average load of the servers at each run.
 
 <p align="center">
-  <img src="task2.png" alt="Experiment 2 Line Chart">
+  <img src="task2.1.png" alt="Experiment 2 Line Chart">
 </p>
 
 ### Expected Outcome
@@ -98,7 +98,7 @@ make test
 
 - Experiment 1 Results
 <p align="center">
-  <img src="task4.1.png" alt="Experiment 1 Bar Chart">
+  <img src="task1.png" alt="Experiment 1 Bar Chart">
 </p>
 - Experiment 2 results
 <p align="center">
