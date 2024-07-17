@@ -85,11 +85,22 @@ make test
 1. Test load balancer endpoints and simulate server failures.
 2. Ensure the load balancer spawns new instances to handle the load and maintain the specified number of replicas.
 
-![Experiment 3 Image](images/experiment3.png)
+### Observations:
+- The load balancer quickly detected the removal of 2 servers and redistributed the load.
+- Response times remained stable, indicating efficient handling of server failures.
+- The load balancer effectively scaled down when 2 servers were removed.
+- Load distribution post-scaling was balanced, maintaining system performance.
 
 ## Experiment 4: Hash Function Modification
 
 1. Modify the hash function: `i % 512 (number) of slots`.
 2. Repeat Experiments 1 and 2, analyzing the impact on load distribution and scalability.
 
-
+- Experiment 1 Results
+<p align="center">
+  <img src="task4.1.png" alt="Experiment 1 Bar Chart">
+</p>
+- Experiment 2 results
+<p align="center">
+  <img src="task4.2.png" alt="Experiment 1 Bar Chart">
+</p>
