@@ -61,7 +61,9 @@ make test
 1. Launch 10,000 asynchronous requests on 3 server containers.
 2. Record the number of requests each server handles and plot a bar chart.
 
-![Experiment 1 Bar Chart](task1.png)
+<p align="center">
+  <img src="task1.png" alt="Experiment 1 Bar Chart">
+</p>
 
 ### Expected Outcome
 - Even distribution of load among server instances
@@ -71,10 +73,12 @@ make test
 1. Increment the number of server containers from 2 to 6 (launching 10,000 requests each time).
 2. Plot a line chart showing the average load of the servers at each run.
 
-![Experiment 2 Line Chart](task2.png)
+<p align="center">
+  <img src="task2.png" alt="Experiment 2 Line Chart">
+</p>
 
 ### Expected Outcome
-- Efficient scaling with even load distribution as server instances increase.
+- Efficient scaling with even load distribution as server instances increase
 
 ## Experiment 3: Failure Recovery
 
@@ -88,11 +92,4 @@ make test
 1. Modify the hash function: `i % 512 (number) of slots`.
 2. Repeat Experiments 1 and 2, analyzing the impact on load distribution and scalability.
 
-- Experiment 1
-  
-- The load distribution is uneven, with server_1 handling the most requests and server_3 handling the least.
-- A possible reason for this discrepancy could be network latency.
-- Experiment 2
-  
-- The average load per server decreases as the number of servers increases, indicating good scalability.
 
