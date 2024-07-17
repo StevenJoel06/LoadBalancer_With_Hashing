@@ -1,7 +1,7 @@
 # Load Balancer Project
 
 ## Overview
-This project implements a customizable load balancer that distributes client requests among several server replicas using consistent hashing. The primary goal is to distribute the load evenly and efficiently among the servers using consistent hashing. The load balancer can handle server failures by spawning new replicas and ensures high availability and scalability of services.
+This project implements a customizable load balancer that distributes client requests among several server replicas using consistent hashing. The primary goal is distributing the load evenly and efficiently among the servers using consistent hashing. The load balancer can handle server failures by spawning new replicas and ensuring services' high availability and scalability.
 
 ## System Architecture
 
@@ -29,7 +29,7 @@ Languages: Python 3.8 or above
     sudo chmod +x /usr/local/bin/docker-compose
     sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
-3. Install Python Depencies
+3. Install Python Dependencies
     ```bash
    sudo apt-get install python3-pip
    pip3 install -r requirements.txt
@@ -59,9 +59,9 @@ make test
 ## Experiment 1: Load Distribution
 
 1. Launch 10,000 asynchronous requests on 3 server containers.
-2. Record the number of requests handled by each server and plot a bar chart.
+2. Record the number of requests each server handles and plot a bar chart.
 
-![Experiment 1 Bar Chart](images/experiment1.png)
+![Experiment 1 Bar Chart](task1.png)
 
 ### Expected Outcome
 - Even distribution of load among server instances
@@ -71,7 +71,7 @@ make test
 1. Increment the number of server containers from 2 to 6 (launching 10,000 requests each time).
 2. Plot a line chart showing the average load of the servers at each run.
 
-![Experiment 2 Line Chart](images/experiment2.png)
+![Experiment 2 Line Chart](task2.png)
 
 ### Expected Outcome
 - Efficient scaling with even load distribution as server instances increase.
@@ -89,7 +89,8 @@ make test
 2. Repeat Experiments 1 and 2, analyzing the impact on load distribution and scalability.
 
 - Experiment 1
-![Experiment 4 Image](images/experiment4.png)
-
+The load distribution is uneven, with server_1 handling the most requests and server_3 handling the least.
+A possible reason for this discrepancy could be network latency.
 - Experiment 2
-![Experiment 4 Image](images/experiment4.png)
+The average load per server decreases as the number of servers increases, indicating good scalability.
+
