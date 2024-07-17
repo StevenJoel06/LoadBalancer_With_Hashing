@@ -89,8 +89,10 @@ make test
 2. Repeat Experiments 1 and 2, analyzing the impact on load distribution and scalability.
 
 - Experiment 1
-The load distribution is uneven, with server_1 handling the most requests and server_3 handling the least.
-A possible reason for this discrepancy could be network latency.
+  
+- The load distribution is uneven, with server_1 handling the most requests and server_3 handling the least.
+- A possible reason for this discrepancy could be network latency.
 - Experiment 2
-The average load per server decreases as the number of servers increases, indicating good scalability.
+  
+- The average load per server decreases as the number of servers increases, indicating good scalability.
 
