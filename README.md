@@ -53,3 +53,43 @@ Languages: Python 3.8 or above
 Run the tests using:
 ```bash
 make test
+```
+# Performance Analysis
+
+## Experiment 1: Load Distribution
+
+1. Launch 10,000 asynchronous requests on 3 server containers.
+2. Record the number of requests handled by each server and plot a bar chart.
+
+![Experiment 1 Bar Chart](images/experiment1.png)
+
+### Expected Outcome
+- Even distribution of load among server instances
+
+## Experiment 2: Scalability
+
+1. Increment the number of server containers from 2 to 6 (launching 10,000 requests each time).
+2. Plot a line chart showing the average load of the servers at each run.
+
+![Experiment 2 Line Chart](images/experiment2.png)
+
+### Expected Outcome
+- Efficient scaling with even load distribution as server instances increase.
+
+## Experiment 3: Failure Recovery
+
+1. Test load balancer endpoints and simulate server failures.
+2. Ensure the load balancer spawns new instances to handle the load and maintain the specified number of replicas.
+
+![Experiment 3 Image](images/experiment3.png)
+
+## Experiment 4: Hash Function Modification
+
+1. Modify the hash function: `i % 512 (number) of slots`.
+2. Repeat Experiments 1 and 2, analyzing the impact on load distribution and scalability.
+
+- Experiment 1
+![Experiment 4 Image](images/experiment4.png)
+
+- Experiment 2
+![Experiment 4 Image](images/experiment4.png)
