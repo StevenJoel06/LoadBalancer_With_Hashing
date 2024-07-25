@@ -62,7 +62,7 @@ make test
 2. Record the number of requests each server handles and plot a bar chart.
 
 <p align="center">
-  <img src="task1.png" alt="Experiment 1 Bar Chart">
+  <img src="output1.png" alt="Experiment 1 Bar Chart">
 </p>
 
 ### Observation
